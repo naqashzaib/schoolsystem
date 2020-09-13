@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E4656324-FFB4-4BAA-BDBE-2CA6C33394AC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>studentmanagementsystem</RootNamespace>
+    <AssemblyName>studentmanagementsystem</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MetroFramework">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Add_Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_Student.designer.cs">
+      <DependentUpon>Add_Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_team.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_team.designer.cs">
+      <DependentUpon>add_team.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\ClsCompanyInfo.cs" />
+    <Compile Include="Company_Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company_Profile.Designer.cs">
+      <DependentUpon>Company_Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dashborad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dashborad.Designer.cs">
+      <DependentUpon>dashborad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Datarecover.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Datarecover.designer.cs">
+      <DependentUpon>Datarecover.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_AddStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_AddStudent.designer.cs">
+      <DependentUpon>Edit_AddStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forget_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forget_form.designer.cs">
+      <DependentUpon>forget_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\feevochar1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>feevochar.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="start.Designer.cs">
+      <DependentUpon>start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="student_card_export.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="student_card_export.Designer.cs">
+      <DependentUpon>student_card_export.cs</DependentUpon>
+    </Compile>
+    <Compile Include="student_reoprt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="student_reoprt.Designer.cs">
+      <DependentUpon>student_reoprt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewreport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewreport.Designer.cs">
+      <DependentUpon>viewreport.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Add_Student.resx">
+      <DependentUpon>Add_Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_team.resx">
+      <DependentUpon>add_team.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company_Profile.resx">
+      <DependentUpon>Company_Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dashborad.resx">
+      <DependentUpon>dashborad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Datarecover.resx">
+      <DependentUpon>Datarecover.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_AddStudent.resx">
+      <DependentUpon>Edit_AddStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forget_form.resx">
+      <DependentUpon>forget_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\feevochar.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>feevochar1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="start.resx">
+      <DependentUpon>start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="student_card_export.resx">
+      <DependentUpon>student_card_export.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="student_reoprt.resx">
+      <DependentUpon>student_reoprt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewreport.resx">
+      <DependentUpon>viewreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admission_open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\83973779.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="pics\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search-Images-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Flatastic-1-Edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ssu_school_logo.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2019-12-23 at 12.43.25 AM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uaf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\1.jpg" />
+    <Content Include="Resources\169_arrow_back_left-128.png" />
+    <None Include="Resources\169_arrow_back_left-1281.png" />
+    <Content Include="Resources\7101340bbc251460383119-optinmonster-lightbox-medical.gif" />
+    <Content Include="Resources\7101340bbc251460383119-optinmonster-lightbox-medical.png" />
+    <Content Include="Resources\83f14f812fbfcc4786cfcc1885e9d825.png" />
+    <Content Include="Resources\Add Compnay.gif" />
+    <Content Include="Resources\addbills.png" />
+    <Content Include="Resources\addcompany.png" />
+    <Content Include="Resources\adddealer.gif" />
+    <Content Include="Resources\addproduct.png" />
+    <Content Include="Resources\add_to_cart-128.gif" />
+    <Content Include="Resources\add_to_cart-128.png" />
+    <Content Include="Resources\as.jpeg" />
+    <Content Include="Resources\back-1689836_960_720.png" />
+    <Content Include="Resources\background-hd-wallpapers-006.jpg" />
+    <Content Include="Resources\bil.gif" />
+    <Content Include="Resources\billrecord.png" />
+    <Content Include="Resources\breakthrough-hero-orange-desktop.jpg" />
+    <Content Include="Resources\breakthrough-hero-orange-desktop1.jpg" />
+    <Content Include="Resources\Capture.JPG" />
+    <Content Include="Resources\Capture1.JPG" />
+    <Content Include="Resources\Categories-Icon-03.png" />
+    <Content Include="Resources\cf67b7caa0fdd4f493a105c076be8f92--organic-logo-apple-logo.jpg" />
+    <Content Include="Resources\commercemoneymarket-Biz.png" />
+    <Content Include="Resources\Dapino-Medical-Medical-suitecase.ico" />
+    <Content Include="Resources\dealer.png" />
+    <Content Include="Resources\f51adaef-3e13-49a7-b2d5-c4e18f7e99c8.png" />
+    <Content Include="Resources\forgot.png" />
+    <None Include="Resources\forgot1.png" />
+    <Content Include="Resources\HDwK97lY_400x400.png" />
+    <Content Include="Resources\ice_screenshot_20171212-014655.png" />
+    <Content Include="Resources\icon-account %281%29.png" />
+    <Content Include="Resources\icon-account.png" />
+    <Content Include="Resources\lgo12.jpg" />
+    <None Include="Resources\lgo121.jpg" />
+    <Content Include="Resources\login.png" />
+    <Content Include="Resources\login1.png" />
+    <Content Include="Resources\login2.png" />
+    <Content Include="Resources\logout.gif" />
+    <Content Include="Resources\logout1.gif" />
+    <Content Include="Resources\op.gif" />
+    <Content Include="Resources\purchase.gif" />
+    <Content Include="Resources\purchaserecord.png" />
+    <Content Include="Resources\red-1937366_960_720.jpg" />
+    <Content Include="Resources\search-icon-62311.png" />
+    <Content Include="Resources\search-icon-623111.png" />
+    <Content Include="Resources\secrecy-512.png" />
+    <Content Include="Resources\shutdown-128.gif" />
+    <Content Include="Resources\stock record.png" />
+    <Content Include="Resources\stock.gif" />
+    <Content Include="Resources\thumb-1920-39819.jpg" />
+    <Content Include="Resources\Untitled-1.png" />
+    <Content Include="Resources\Untitled-112.jpg" />
+    <Content Include="Resources\user.gif" />
+    <Content Include="Resources\user_login-512.png" />
+    <Content Include="Resources\User_login.png" />
+    <Content Include="Resources\wcadmin.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
