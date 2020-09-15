@@ -35,6 +35,8 @@ namespace studentmanagementsystem
         {
             crystalReportViewer1.RefreshReport();
             feevochar showstu = new feevochar();
+            crystalReportViewer1.RefreshReport();
+            showstu.Refresh();
             showstu.SetParameterValue("getquyerstring", Convert.ToString(Loadreport));
             crystalReportViewer1.ReportSource = showstu;    
         }
@@ -42,13 +44,13 @@ namespace studentmanagementsystem
         {
             try
             {
+                crystalReportViewer1.RefreshReport();
                 ReportDocument rtc = new ReportDocument();
                 string apppath, reportpath, fullpath;
                 apppath = Application.StartupPath;
                 reportpath = report;
                 fullpath = Path.Combine(apppath, reportpath);
                 rtc.Load(fullpath);
-                crystalReportViewer1.RefreshReport();
                 crystalReportViewer1.ReportSource = rtc;
             }
             catch (Exception ex)

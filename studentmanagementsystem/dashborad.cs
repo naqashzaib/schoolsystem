@@ -187,5 +187,31 @@ namespace studentmanagementsystem
             adstu.MdiParent = this;
             adstu.Show();
         }
+
+        private void reportStudentToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            student_card_export adstu = new student_card_export();
+            adstu.MdiParent = this;
+            adstu.Show();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            student_reoprt adstu = new student_reoprt();
+            adstu.MdiParent = this;
+            adstu.Show();
+        }
+
+        private void settingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void studentAttendanceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            attendence adstu = new attendence();
+            adstu.MdiParent = this;
+            adstu.Show();
+        }
     }
 }

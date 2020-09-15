@@ -1346,8 +1346,7 @@ txts_email.Enabled = true;
 
 
                 Random rmd = new Random();
-                int ramnumber = rmd.Next(0, 10000000);
-                string ran = ramnumber.ToString();
+                string ran =  DateTime.UtcNow.Ticks.ToString().Substring(8);
                 string exsitrecord="";
                 using (SqlConnection connection = new SqlConnection(c))
                 {

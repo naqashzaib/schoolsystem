@@ -16,7 +16,7 @@ namespace studentmanagementsystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new student_card_export());
+            Application.Run(new dashborad());
         }
     }
 }
